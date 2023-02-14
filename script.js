@@ -6,8 +6,23 @@ aArr = [...aList];
 
 
 aArr.forEach(e => {
-    if(e.textContent.includes("2.0")) {
+    if (e.textContent.includes("2.0")) {
         e.remove();
+        // e.parentNode.removeChild(e); another way
     }
 });
-  
+
+
+// Task 2
+
+let textInputArea = document.querySelector(".main__form-input")
+
+textInputArea.disabled = !true;
+
+let textInputButton = document.querySelector(".main__form-btn");
+
+textInputButton.disabled = !true;
+
+textInputButton.addEventListener("click", () => {
+    location.reload();
+})
